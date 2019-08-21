@@ -32,6 +32,7 @@ GEM
     erubi (1.8.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    json (2.2.0)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -70,9 +71,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 5.2.3)
+  json
   pg
-  railties
-  rake
   standalone_migrations
 
 BUNDLED WITH
