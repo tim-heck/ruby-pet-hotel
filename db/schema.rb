@@ -10,16 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_191521) do
+ActiveRecord::Schema.define(version: 2019_08_22_214907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "pets", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "breed", null: false
-    t.string "color", null: false
-    t.string "checked_in", null: false
+  create_table "owners", force: :cascade do |t|
+    t.string "name"
+    t.integer "num_of_pets"
   end
 
+  create_table "pets", force: :cascade do |t|
+    t.bigint "owner_id"
+    t.string "name"
+    t.string "breed"
+    t.string "color"
+    t.string "checked_in"
+    t.index ["owner_id"], name: "index_pets_on_owner_id"
+  end
+
+  add_foreign_key "pets", "owners"
 end
