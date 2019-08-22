@@ -7,9 +7,3 @@ default: &default
 development:
   <<: *default
   database: pet_hotel
-
-# test: &test
-#   <<: *default
-#   database: movies_test
-
-production:
