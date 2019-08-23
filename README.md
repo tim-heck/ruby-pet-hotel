@@ -1,5 +1,7 @@
 # Ruby Pet Hotel
 
+This web application is the server-side part of a full stack application with React.js as the front-end and Ruby as the back-end. This project's purpose was to explore a different server-side lanugage in a group setting.
+
 ## Setting up ActiveRecord
 
 ### Setting up this file
